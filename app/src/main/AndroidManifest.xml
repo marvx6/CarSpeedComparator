@@ -3,7 +3,7 @@
     package="com.example.marvin.carspeedcomparator">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
-        
+
     </uses-permission>
     <application
         android:allowBackup="true"
