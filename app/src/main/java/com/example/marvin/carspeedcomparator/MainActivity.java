@@ -58,7 +58,8 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+
+                Snackbar.make(view, "Cool stuff is waiting for you Guys - Keep it up! Tschuup Tschuup!", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -135,10 +136,10 @@ public class MainActivity extends AppCompatActivity
         TextView txt = (TextView) this.findViewById(R.id.txt_speed);
 
 
-        if (location == null) {
-             txt.setText("-.-");
+        if (location == null || location.getSpeed() < 1) {
+             txt.setText("_._" + " km/h");
         } else {
-            txt.setText( location.getSpeed() + "km/h");
+            txt.setText( Math.round(location.getSpeed() *3.6) + " km/h");
         }
     }
 
